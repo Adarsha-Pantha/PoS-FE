@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../_component/Navbar'
 import Image from 'next/image'
 import Logo from '../_component/logo.png'
-import url from '../signup/page'
+import { Link } from 'next/link'
 
 const login = () => {
   return (
@@ -25,7 +25,7 @@ const login = () => {
                 <button type="submit" className="bg-blue-500 py-2 px-4 rounded-lg">Submit</button>
               </form>
               <div className='mt-6 '>
-                <a href="" className='underline underline-offset-8'>forgot password ?</a>
+                <Link href="" className='underline underline-offset-8'>forgot password ?</Link>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@ const login = () => {
             </div>
           </div>
           <div className="card-header">
-            <h2>don't have account ? <a href="../page/signup" className='underline underline-offset-8'>click here for register</a></h2>
+            <h2>don't have account ? <Link href="../page/signup" className='underline underline-offset-8'>click here for register</Link></h2>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Navber from './_component/Navbar'
+import Navbar from './_component/Navbar'
 import Logo from './_component/logo.png'
 import gif from './_component/TGT-Animation.gif'
 
@@ -8,7 +8,7 @@ const Page = () => {
   return (
     <>
       <div >
-        <Navber />
+        <Navbar />
       </div>
       <div className='mt-10 flex justify-center items-center sm:flex-row gap-20'>
         <div className=' flex justify-start items-center'>

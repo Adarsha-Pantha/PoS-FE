@@ -15,7 +15,7 @@ const Page = () => {
           <Image src={gif} height={500} width={500}/>
         </div>
         <div className='flex sm:flex-col items-center'>
-          <Image src={Logo} />
+          <Image src={Logo} alt='big logo' />
           <div className='flex flex-col gap-6 text-amber-300'>
             <p className='text-center text-4xl font-bold '>Welcome to <br /> PoS System</p>
             <p className='text-center text-2xl font-bold'>PoS is an online system that allows <br />you to manage your

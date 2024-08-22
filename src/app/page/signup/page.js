@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../_component/Navbar'
 import Image from 'next/image'
-import Logo from './logo.png'
+import Logo from '../_component/logo.svg'
 
 const signUp = () => {
   return (
@@ -11,7 +11,7 @@ const signUp = () => {
       </div>
       <div className="container flex sm:justify-center flex-row gap-56">
         <div className='flex justify-center items-center'>
-          <Image src={Logo} alt="kk" />
+          <Image src={Logo} height={450} alt="big logo" />
         </div>
         <div>
           <form>

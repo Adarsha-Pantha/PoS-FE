@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../_component/Navbar'
 import Image from 'next/image'
 import Logo from '../_component/logo.png'
+import url from '../signup/page'
 
 const login = () => {
   return (
@@ -39,7 +40,7 @@ const login = () => {
             </div>
           </div>
           <div className="card-header">
-            <h2>don't have account ? <a href="" className='underline underline-offset-8'>click here for register</a></h2>
+            <h2>don't have account ? <a href="../page/signup" className='underline underline-offset-8'>click here for register</a></h2>
           </div>
         </div>
       </div>

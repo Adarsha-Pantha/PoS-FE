@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Button from './Button';
 import logo from './logo.png'
+import url from '../page'
 
 
 const Navbar = () => {
@@ -12,7 +13,7 @@ const Navbar = () => {
 
                     {/* <!-- Logo --> */}
                     <div class="flex items-center">
-                        <a href="#" class="text-white text-2xl font-bold"><Image src={logo} height={42} width={42}/></a>
+                        <a href='../page' class="text-white text-2xl font-bold"><Image src={logo} height={42} width={42}/></a>
                     </div>
 
                     {/* <!-- Buttons (Login and Sign Up) --> */}

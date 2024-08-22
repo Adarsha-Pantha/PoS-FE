@@ -11,7 +11,7 @@ const Navbar = () => {
           {/* <!-- Logo --> */}
           <div className="flex items-center">
             <a href="../page" className="text-white text-2xl font-bold">
-              <Image src={logo} height={42} width={42} />
+              <Image src={logo} height={42} width={42} alt="logo"/>
             </a>
           </div>
           {/* <!-- Buttons (Login and Sign Up) --> */}

@@ -12,7 +12,7 @@ const Page = () => {
       </div>
       <div className='mt-10 flex justify-center items-center sm:flex-row gap-20'>
         <div className=' flex justify-start items-center'>
-          <Image src={gif} height={500} width={500}/>
+          <Image src={gif} height={500} width={500} alt='gif animation'/>
         </div>
         <div className='flex sm:flex-col items-center'>
           <Image src={Logo} alt='big logo' />

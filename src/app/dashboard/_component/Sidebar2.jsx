@@ -41,8 +41,8 @@ const Sidebar2 = () => {
         <BsArrowLeftShort className={`bg-white text-green-800 rounded-full border border-cyan-800 text-3xl absolute -right-3 top-9 cursor-pointer ${!active && "rotate-180"}`} onClick={() => setActive(!active)} />
         <div className="inline-flex items-center">
           <Image src="/logo.svg" alt="logo" width={38} height={38} className={`bg-yellow-400 text-black text-4xl rounded-md cursor-pointer block float-left mr-2 duration-500 ${!active && "rotate-[360deg]"}`} />
-          <h2 className={`text-white origin-left font-medium text-2xl duration-300 ${!active && "hidden"}`}>
-            Going Genius
+          <h2 className={`text-white origin-left font-medium text-2xl duration-300 ${!active && "scale-0"}`}>
+            G.Genius
           </h2>
         </div>
         <div className={`flex items-center rounded-md mt-6 bg-lime-300 ${!active ? "px-2.5" : "px-4"} py-2`} >

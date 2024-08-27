@@ -23,7 +23,7 @@ const Navbar = () => {
           </div>
           <div className="nav-links flex space-x-6">
             <a
-              href="#home"
+              href="/"
               className="text-white hover:text-gray-300 transition-colors transform hover:scale-105"
             >
               Home

@@ -2,23 +2,21 @@
 
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import SupplierForm from "@/components/SupplierForm";
-import ThreeScene from "../components/ThreeScene";
+import ThreeScene from "@/components/ThreeScene";
 import Link from "next/link";
 import Image from "next/image";
 
 const HomePage = () => {
   return (
     <div className="relative overflow-hidden h-screen bg-gradient-to-r from-blue-500 to-blue-800">
-      <ThreeScene /> {/* Add the enhanced Three.js scene as a background */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 bg-purple">
+      <ThreeScene /> {/* Enhanced Three.js scene as a background */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
         <h1
           className="text-6xl font-extrabold mb-4 animate-bounce text-black"
           style={{ fontFamily: "Poppins, sans-serif" }}
         >
           Welcome to Going Genius
         </h1>
-
         <p className="text-lg mb-8">
           Transforming your vision into reality with cutting-edge solutions.
         </p>
@@ -48,7 +46,7 @@ const AboutUs = () => {
         <ul className="space-y-4 text-lg">
           <li>Advanced Solutions</li>
           <li>Innovative Approaches</li>
-          <li>Customer Focused</li>
+          <li>Customer-Focused</li>
         </ul>
       </div>
     </section>
@@ -64,7 +62,7 @@ const ContactUs = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
         <p className="text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-          Get in touch with us today and let's start something amazing together.
+          Get in touch with us today and let&apos;s start something amazing together.
         </p>
         <div className="flex justify-center gap-6">
           <a
@@ -90,7 +88,7 @@ const ContactUs = () => {
               alt="Instagram"
               width={40}
               height={40}
-              className="w-10 h-10 hover:scale-110 transition-transform"
+              className="hover:scale-110 transition-transform"
             />
           </a>
           <a
@@ -103,7 +101,7 @@ const ContactUs = () => {
               alt="LinkedIn"
               width={40}
               height={40}
-              className="w-10 h-10 hover:scale-110 transition-transform"
+              className="hover:scale-110 transition-transform"
             />
           </a>
         </div>
@@ -127,19 +125,17 @@ const Page = () => {
         }
       }
     };
-  
+
     document.addEventListener("click", handleScroll);
-  
+
     return () => {
       document.removeEventListener("click", handleScroll);
     };
   }, []);
-  
 
   return (
     <>
       <Navbar />
-
       <div className="pt-[130px]">
         <HomePage />
         <AboutUs />

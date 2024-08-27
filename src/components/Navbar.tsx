@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+
 
 const Navbar = () => {
   return (
@@ -10,9 +12,11 @@ const Navbar = () => {
         <div className="left-section flex items-center space-x-8">
           <div className="logo">
             <Link href="/">
-              <img
+              <Image
                 src="/GG.svg"
                 alt="Logo"
+                width={40}
+                height={40}
                 className="h-10 cursor-pointer transition-transform transform hover:scale-110"
               />
             </Link>

@@ -4,34 +4,33 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import SupplierForm from "@/components/SupplierForm";
 import ThreeScene from "../components/ThreeScene";
-import Link from 'next/link';
-
-
+import Link from "next/link";
+import Image from "next/image";
 
 const HomePage = () => {
- 
-    return (
-      <div className="relative overflow-hidden h-screen bg-gradient-to-r from-blue-500 to-blue-800">
-
-        <ThreeScene /> {/* Add the enhanced Three.js scene as a background */}
-  
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 bg-purple">
-          <h1 className="text-6xl font-extrabold  mb-4 animate-bounce text-black style={{ fontFamily: 'Poppins', sans-serif }}">
+  return (
+    <div className="relative overflow-hidden h-screen bg-gradient-to-r from-blue-500 to-blue-800">
+      <ThreeScene /> {/* Add the enhanced Three.js scene as a background */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 bg-purple">
+        <h1
+          className="text-6xl font-extrabold mb-4 animate-bounce text-black"
+          style={{ fontFamily: "Poppins, sans-serif" }}
+        >
           Welcome to Going Genius
-          </h1>
-          <p className="text-lg mb-8">
-            Transforming your vision into reality with cutting-edge solutions.
-          </p>
-          <Link href="#about">
-            <button className="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-colors">
-              Learn More
-            </button>
-          </Link>
-        </div>
-      </div>
-    );
-  };
+        </h1>
 
+        <p className="text-lg mb-8">
+          Transforming your vision into reality with cutting-edge solutions.
+        </p>
+        <Link href="#about">
+          <button className="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-colors">
+            Learn More
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+};
 
 const AboutUs = () => {
   return (
@@ -73,10 +72,12 @@ const ContactUs = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               src="/facebook.png"
               alt="Facebook"
-              className="w-10 h-10 hover:scale-110 transition-transform"
+              width={40}
+              height={40}
+              className="hover:scale-110 transition-transform"
             />
           </a>
           <a
@@ -84,9 +85,11 @@ const ContactUs = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               src="/instagram.png"
               alt="Instagram"
+              width={40}
+              height={40}
               className="w-10 h-10 hover:scale-110 transition-transform"
             />
           </a>
@@ -95,9 +98,11 @@ const ContactUs = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               src="/linkedin.png"
               alt="LinkedIn"
+              width={40}
+              height={40}
               className="w-10 h-10 hover:scale-110 transition-transform"
             />
           </a>
@@ -109,7 +114,7 @@ const ContactUs = () => {
 
 const Page = () => {
   useEffect(() => {
-    const handleScroll = (e: Event) => {
+    const handleScroll = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (target.tagName === "A") {
         e.preventDefault();
@@ -122,18 +127,19 @@ const Page = () => {
         }
       }
     };
-
+  
     document.addEventListener("click", handleScroll);
-
+  
     return () => {
       document.removeEventListener("click", handleScroll);
     };
   }, []);
+  
 
   return (
     <>
-     <Navbar />
-     
+      <Navbar />
+
       <div className="pt-[130px]">
         <HomePage />
         <AboutUs />

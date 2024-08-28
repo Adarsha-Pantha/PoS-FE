@@ -37,8 +37,8 @@ const Sidebar2 = () => {
   ];
 
   return (
-    <aside className="flex">
-      <div className={`bg-slate-500 h-screen p-5 pt-8 ${active ? "w-72" : "w-20"} duration-300 relative`} >
+    <aside className="flex ">
+      <div className={`bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100 h-screen p-5 pt-8 ${active ? "w-72" : "w-20"} duration-300 relative rounded-xl`} >
         <BsArrowLeftShort className={`bg-white text-green-800 rounded-full border border-cyan-800 text-3xl absolute -right-3 top-9 cursor-pointer ${!active && "rotate-180"}`} onClick={() => setActive(!active)} />
         <div className="inline-flex items-center">
           <Image src="/logo.svg" alt="logo" width={38} height={38} className={`bg-yellow-400 text-black text-4xl rounded-md cursor-pointer block float-left mr-2 duration-500 ${!active && "rotate-[360deg]"}`} />
@@ -51,31 +51,31 @@ const Sidebar2 = () => {
           <input type="text" placeholder="Search" className={`text-black text-base bg-transparent focus:outline-none w-full ${!active && "hidden"}`} />
         </div>
         <ul className="pt-6">
-  {menu.map((menuItem) => (
-    <React.Fragment key={menuItem.id}>
-      <li className={`text-white text-sm flex items-center gap-x-2 cursor-pointer p-1.5 duration-200 hover:bg-zinc-600 rounded-md ${menuItem.spacing ? 'mt-9' : 'mt-2'}`}>
-        <span className={`block float-left duration-300 ${!active ? 'text-3xl': 'text-2xl'}`} onClick={() => setActive(!active)}>
-          {menuItem.icon}
-        </span>
-        <a href={menuItem.link} className={`text-white text-base font-medium flex-1 duration-500 ${!active && "hidden"}`}>
-          {menuItem.name}
-        </a>
-        {menuItem.submenu && active && (
-          <MdKeyboardArrowDown className={`${open && 'rotate-180'}`} onClick={() => setOpen(!open)} />
-        )}
-      </li>
-      {menuItem.submenu && open && active && (
-        <ul className={`text-white text-sm cursor-pointer p-2 rounded-md ml-3 bg-slate-600`}>
-          {menuItem.submenuItems.map((submenuItem) => (
-            <li key={submenuItem.subId} className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5 rounded-md hover:bg-slate-400`}>
-              <a href={submenuItem.link}>{submenuItem.name}</a>
-            </li>
+          {menu.map((menuItem) => (
+            <React.Fragment key={menuItem.id}>
+              <li className={`text-white text-sm flex items-center gap-x-2 cursor-pointer p-1.5 duration-200 hover:bg-zinc-600 rounded-md ${menuItem.spacing ? 'mt-9' : 'mt-2'}`}>
+                <span className={`block float-left duration-300 ${!active ? 'text-3xl' : 'text-2xl'}`} onClick={() => setActive(!active)}>
+                  {menuItem.icon}
+                </span>
+                <a href={menuItem.link} className={`text-white text-base font-medium flex-1 duration-500 ${!active && "hidden"}`}>
+                  {menuItem.name}
+                </a>
+                {menuItem.submenu && active && (
+                  <MdKeyboardArrowDown className={`${open && 'rotate-180'}`} onClick={() => setOpen(!open)} />
+                )}
+              </li>
+              {menuItem.submenu && open && active && (
+                <ul className={`text-white text-sm cursor-pointer p-2 rounded-md ml-3 bg-slate-600`}>
+                  {menuItem.submenuItems.map((submenuItem) => (
+                    <li key={submenuItem.subId} className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5 rounded-md hover:bg-slate-400`}>
+                      <a href={submenuItem.link}>{submenuItem.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </React.Fragment>
           ))}
         </ul>
-      )}
-    </React.Fragment>
-  ))}
-</ul>
 
       </div>
     </aside>
